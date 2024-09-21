@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%; 
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin-inline: 1rem;
+}
+
+.icons {
+  font-size: 1.85rem;
+}
+
+.icons-2 {
+  font-size: 1rem;
+}
+
+/********** Navbar **********/
+
+.nav {
+  margin-block: .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  
+}
+
+.nav-right, .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1rem;
+}
+
+.nav-menu {
+  position: absolute;
+  top: -600%;
+  left: 0%;
+  background-color: #fff;
+  width: 100%;
+  padding-block: 1rem;
+  flex-direction: column;
+  column-gap: 0;
+  row-gap: 1rem;
+  transition: top .5s ease;
+}
+
+.show {
+  top: 0%;
+  transition: .5s ease;
+}
+
+
+/********** Sidebar **********/
+
+.sidebar {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 85%;
+  background-color: #fff;
+  padding-block: 1rem 2rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  row-gap: 1rem;
+}
+
+.settings-container {
+  
+}

@@ -1,0 +1,44 @@
+import { useState } from 'react';
+import { LuMenuSquare, LuUser } from "react-icons/lu";
+import { RiArrowDropDownLine, RiCloseCircleLine } from "react-icons/ri";
+
+const Navbar = () => {
+
+  const [showMenu, setShowMenu] = useState(false);
+  
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  }
+  
+  return (
+    <header id="header" className="header">
+      <nav className="nav container">
+        <div className="nav-left">
+          <LuMenuSquare className="sidebar-open icons" />
+        </div>
+        
+        <div className="nav-right">
+          
+          <ul className={showMenu ? "nav-menu show" : "nav-menu"}>
+            {["Link 1", "Link 2", "Link 3"].map((item, key) => {
+              return (
+                <li key={key} className="nav-menu-opts">
+                  <a className="nav-menu-links">{item}</a>
+                </li>
+              );
+            })}
+            <RiCloseCircleLine className="dropdown-close icons" onClick={toggleMenu} />
+          </ul>
+
+          <RiArrowDropDownLine className="nav-menu-dropdown icons" onClick={toggleMenu} />
+
+          <div className="user-container">
+            <LuUser className="user-settings icons"/>
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;

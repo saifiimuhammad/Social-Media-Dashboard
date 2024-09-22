@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { LuMenuSquare, LuUser } from "react-icons/lu";
 import { RiArrowDropDownLine, RiCloseCircleLine } from "react-icons/ri";
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+  const { toggleSidebar } = props;
 
   const [showMenu, setShowMenu] = useState(false);
   
@@ -14,12 +16,12 @@ const Navbar = () => {
     <header id="header" className="header">
       <nav className="nav container">
         <div className="nav-left">
-          <LuMenuSquare className="sidebar-open icons" />
+          <LuMenuSquare className="sidebar-open icons" onClick={toggleSidebar} />
         </div>
         
         <div className="nav-right">
           
-          <ul className={showMenu ? "nav-menu show" : "nav-menu"}>
+          <ul className={showMenu ? "nav-menu show-nav-menu" : "nav-menu"}>
             {["Link 1", "Link 2", "Link 3"].map((item, key) => {
               return (
                 <li key={key} className="nav-menu-opts">

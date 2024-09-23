@@ -7,7 +7,9 @@ const Home = () => {
       <div className="home-container container">
         
           <Card title="Facebook" />
-      
+        <Card title="Instagram" />
+      <Card title="Linkedin" />
+        <Card title="Twitter" />
       </div>
     </main>
   );

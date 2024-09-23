@@ -38,13 +38,20 @@ a {
 
 /********** Navbar **********/
 
+.header {
+  position: relative;
+  backgroud: tranparent;
+  
+}
 .nav {
-  margin-block: .75rem;
+  padding-block: .55rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background-color: white;
 }
 
 .nav-right, .nav-menu {
@@ -72,13 +79,17 @@ a {
   transition: .5s ease;
 }
 
+.on-nav-scroll {
+  border-bottom: 1px solid var(--border-color);
+}
 
 /********** Sidebar **********/
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   top: 0%;
   left: -100%;
+  z-index: 9999;
   height: 100%;
   width: 85%;
   background-color: #fff;
@@ -133,7 +144,7 @@ a {
 /******** Home Section ********/
 
 .home-container {
-  padding-inline: 2rem;
+  padding: 3rem 2rem;
   display: flex;
   align-items:center;
   justify-content: center;
@@ -142,11 +153,47 @@ a {
 
 .card {
   width: 90%;
+  display: grid;
+  place-items: center;
+  margin-block: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-block: .75rem;
+}
+
+.card-content {
+  width: 90%;
   border: 1px solid var(--border-color);
   border-radius: .5rem;
   padding: 1rem 1.25rem;
 }
 
 .card-stats {
+  margin-block: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 100;
+  
+}
+
+.stat-changing {
+  color: green;
+  font-size: .75rem;
+  font-weight: 400;
+  padding-left: .15rem;
+}
+
+.stat-title {
+  font-weight: 400;
+  font-size: 1.25rem;
   
 }

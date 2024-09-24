@@ -13,11 +13,13 @@ const App = () => {
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
   }
+
+  const menuOpts = ["Facebook", "Instagram", "Twitter", "Linkedin"];
   
   return (
     <>
-      <Navbar toggleSidebar={toggleSidebar} />
-      <Sidebar logoTitle="Dashboard" toggleSidebar={toggleSidebar} showSidebar={showSidebar} />
+      <Navbar toggleSidebar={toggleSidebar} navLinks={menuOpts} />
+      <Sidebar logoTitle="Dashboard" toggleSidebar={toggleSidebar} showSidebar={showSidebar} sidebarLinks={menuOpts} />
 
       <Home />
     

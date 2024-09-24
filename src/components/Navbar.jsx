@@ -3,7 +3,7 @@ import { LuMenuSquare, LuUser } from "react-icons/lu";
 import { RiArrowDropDownLine, RiCloseCircleLine } from "react-icons/ri";
 
 const Navbar = (props) => {
-  const { toggleSidebar } = props;
+  const { toggleSidebar, navLinks } = props;
 
   const [showMenu, setShowMenu] = useState(false);
   const [scrollNav, onScrollNav] = useState(false);
@@ -40,7 +40,7 @@ const Navbar = (props) => {
 
         <div className="nav-right">
           <ul className={showMenu ? "nav-menu show-nav-menu" : "nav-menu"}>
-            {["Link 1", "Link 2", "Link 3"].map((item, key) => {
+            {navLinks.map((item, key) => {
               return (
                 <li key={key} className="nav-menu-opts">
                   <a className="nav-menu-links">{item}</a>

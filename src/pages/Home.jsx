@@ -1,4 +1,5 @@
-import Card from '../components/Card';
+import SupportedPlatforms from '../components/SupportedPlatforms';
+import KeyFeatures from '../components/KeyFeatures';
 
 
 const Home = () => {
@@ -15,6 +16,9 @@ const Home = () => {
 
 
           <div className="home-figure"></div>
+
+          <SupportedPlatforms />
+          <KeyFeatures />
         </div>
       </div>
     </main>

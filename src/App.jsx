@@ -2,7 +2,8 @@ import './App.css';
 
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
-import Home from './pages/Home';
+import Home from './pages/Home'; 
+import Footer from './components/Footer';
 
 import { useState } from "react";
 
@@ -22,7 +23,8 @@ const App = () => {
       <Sidebar logoTitle="Dashboard" toggleSidebar={toggleSidebar} showSidebar={showSidebar} sidebarLinks={menuOpts} />
 
       <Home />
-    
+
+      <Footer />
     </>
   );
 }

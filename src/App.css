@@ -159,7 +159,7 @@ a {
 
 .home {
   padding-top: 5rem;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -304,4 +304,63 @@ a {
 .feature-title {
   font-size: 1.25rem;
   font-weight: 400;
+}
+
+
+/******** Footer *********/
+
+.footer {
+  padding-block: 1.5rem;
+  border-radius: 10px 10px 0 0;
+  
+  background-color: var(--title-color);
+  color: white;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.footer-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.footer-menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: .75rem;
+}
+
+.newsletter-container {
+  background-color: black;
+  padding: 1.5rem 1rem;
+  border-radius: .5rem;
+}
+
+.email-box {
+  margin-top: .75rem;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.email {
+  padding: .75rem;
+  border-radius: .45rem;
+  width: 70%;
+}
+
+.copyright-tag {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: .85rem;
 }

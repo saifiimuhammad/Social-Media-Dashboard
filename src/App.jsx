@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home'; 
 import Footer from './components/Footer';
+import Signup from './pages/Signup';
 
 import { useState } from "react";
 
@@ -22,7 +23,8 @@ const App = () => {
       <Navbar toggleSidebar={toggleSidebar} navLinks={menuOpts} />
       <Sidebar logoTitle="Dashboard" toggleSidebar={toggleSidebar} showSidebar={showSidebar} sidebarLinks={menuOpts} />
 
-      <Home />
+      {/* <Home /> */}
+      <Signup />
 
       <Footer />
     </>

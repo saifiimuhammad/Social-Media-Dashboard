@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [password, setPassword] = useState("");
@@ -6,9 +7,11 @@ const Signup = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const [error, setError] = useState("");
+	const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+	navigate('/dashboard');
 
     if (password !== confirmPassword) setError("Passwords do not match");
     else setError("");
@@ -69,7 +72,7 @@ const Signup = () => {
             <button type="submit" name="submit" className="signup-btn btn">
               Sign Up
             </button>
-	  <a className="already-registered">Already Registered? Login.</a>
+	  <Link to='/login' className="already-registered">Already Registered? Login.</Link>
 	  </div>
           </form>
         </div>

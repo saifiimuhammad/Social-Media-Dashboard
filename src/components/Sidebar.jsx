@@ -3,7 +3,7 @@ import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
 
 const Sidebar = (props) => {
 
-  const { logoTitle, toggleSidebar, showSidebar, sidebarLinks } = props;
+  const { logoTitle, toggleSidebar, showSidebar, sideLinks } = props;
   
   return (
     <aside className={showSidebar ? "sidebar show-sidebar" : "sidebar"}>
@@ -14,7 +14,7 @@ const Sidebar = (props) => {
 
       <ul className="sidebar-menu">
         {
-          sidebarLinks.map((item, key) => {
+          sideLinks.map((item, key) => {
             return (
               <li className="sidebar-items" key={key}><a className="sidebar-links">{item}</a></li>
             );

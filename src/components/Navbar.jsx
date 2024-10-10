@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { LuMenuSquare, LuUser } from "react-icons/lu";
 import { RiArrowDropDownLine, RiCloseCircleLine } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
   const { toggleSidebar, navLinks } = props;
@@ -43,7 +44,7 @@ const Navbar = (props) => {
             {navLinks.map((item, key) => {
               return (
                 <li key={key} className="nav-menu-opts">
-                  <a className="nav-menu-links">{item}</a>
+                  <Link to='/' className="nav-menu-links">{item}</Link>
                 </li>
               );
             })}

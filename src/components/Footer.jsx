@@ -1,3 +1,7 @@
+
+import { Link } from 'react-router-dom';
+
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -9,21 +13,19 @@ const Footer = () => {
 
           <div className="footer-box">
             <ul className="footer-menu">
-              <li className="footer-items">
-                <a className="footer-links">Home</a>
-              </li>
-              <li className="footer-items">
-                <a className="footer-links">Facebook</a>
-              </li>
-              <li className="footer-items">
-                <a className="footer-links">Instagram</a>
-              </li>
-              <li className="footer-items">
-                <a className="footer-links">Twitter</a>
-              </li>
-              <li className="footer-items">
-                <a className="footer-links">Linkedin</a>
-              </li>
+	  {
+		  [
+			  {name: "Home", link: "/"},
+			  {name: "Dashboard", link: "/dashboard"},
+			  {name: "Account Settings", link: "/account-setting"}
+		  ].map((item, key) => {
+			  return (
+				  <li key={key} className="footer-items">
+				<Link to={item.link} className="footer-links">{item.name}</Link>
+				  </li>
+			  )
+		  })
+	  }
             </ul>
           </div>
 

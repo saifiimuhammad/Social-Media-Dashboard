@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Signup from './pages/Signup';
 
 import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
 
@@ -19,15 +20,17 @@ const App = () => {
   const menuOpts = ["Facebook", "Instagram", "Twitter", "Linkedin"];
   
   return (
-    <>
+    <Router>
       <Navbar toggleSidebar={toggleSidebar} navLinks={menuOpts} />
       <Sidebar logoTitle="Dashboard" toggleSidebar={toggleSidebar} showSidebar={showSidebar} sidebarLinks={menuOpts} />
 
-      {/* <Home /> */}
-      <Signup />
+	  <Routes>
+	  	<Route path='/' element={<Home/>} />
+	  	<Route path='/signup' element={<Signup/>} />
+	  </Routes>
 
       <Footer />
-    </>
+    </Router>
   );
 }
 

@@ -1,8 +1,16 @@
 import SupportedPlatforms from '../components/SupportedPlatforms';
 import KeyFeatures from '../components/KeyFeatures';
+import { useNavigate } from 'react-router-dom';
 
 
 const Home = () => {
+
+	const navigate = useNavigate();
+
+	const goToSignup = () => {
+		navigate('/signup');
+	}
+
   return (
     <main className="home">
       <div className="home-container container">
@@ -12,7 +20,7 @@ const Home = () => {
           </h1>
           <h4 className="home-subtitle">Track, Analyze, Grow - Your Social Media Success Hub!</h4>
 
-          <button className="home-btn btn">Get Started</button>
+          <button onClick={goToSignup} className="home-btn btn">Get Started</button>
 
 
           <div className="home-figure"></div>

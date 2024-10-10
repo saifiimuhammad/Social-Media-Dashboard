@@ -395,4 +395,33 @@ a {
   padding: .25rem;
   color: #474747;
   font-size: 1rem;
+ }
+
+ .submit-btn-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	row-gap: .45rem;
+	width: 100%;
+ }
+
+.signup-btn {
+	margin-top: 1rem;
+	color: white;
+	background-color: var(--btn-bg-color);
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.already-registered {
+	text-decoration: underline;
+	color: blue;
+	font-size: .85rem;
+}
+
+.form-error-container {
+	color: red;
+	width: 100%;
+	height: 10px;
 }

@@ -459,3 +459,41 @@ a {
 	font-size: .95rem;
 	opacity: .7;
 }
+
+.total-insights {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding-block: 1.5rem;
+}
+
+.insight-box {
+	display: grid;
+	place-items: center;
+}
+
+.insight-value {
+	font-size: .95rem;
+}
+
+.insight-title {
+	text-transform: uppercase;
+	font-size: .75rem;
+}
+
+/***** Socials Connected *****/
+
+.socials-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: .6rem;
+}
+
+.connect-icon {
+	color: #fff;
+}
+
+
+

@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { CiCirclePlus } from "react-icons/ci";
 
 
 const UserAccountCard = () => {
@@ -26,6 +27,12 @@ const UserAccountCard = () => {
 				)
 			})
 		}
+		</div>
+		<div className="socials-connected">
+			<span className="socials-box">
+				<h5 className="connect-title">Facebook</h5>
+				<CiCirclePlus className="connect-icon icons-2" />
+		</span>
 		</div>
 		</div>
 	)

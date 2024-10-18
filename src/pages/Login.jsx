@@ -4,9 +4,11 @@ import { Link, useNavigate } from 'react-router-dom';
 const Login = () => {
   const [error, setError] = useState("");
 	const navigate = useNavigate();
+  const AUTH_TOKEN = 1234;
 
   const handleLogin = (e) => {
 	e.preventDefault();
+  localStorage.setItem('authToken', AUTH_TOKEN);
 	navigate('/dashboard');
   };
 

@@ -10,6 +10,13 @@ const UserAccountCard = () => {
                 { name: "Views", value: "34562" }
 	]);
 
+	const [connectedSocials, setConnectedSocials] = useState([
+		{ name: "Facebook", isConnected: false },
+		{ name: "Instagram", isConnected: false },
+		{ name: "Linkedin", isConnected: false },
+		{ name: "Twitter", isConnected: false }
+	]);
+
 	return (
 		<div className="user-card">
 		<div className="user-box">
@@ -29,10 +36,14 @@ const UserAccountCard = () => {
 		}
 		</div>
 		<div className="socials-connected">
-			<span className="socials-box">
-				<h5 className="connect-title">Facebook</h5>
-				<CiCirclePlus className="connect-icon icons-2" />
-		</span>
+		{
+			connectedSocials.map((item, key) => {
+				return (
+					<span key={key} className="socials-box">                                  <h5 className="connect-title">{item.name}</h5>
+ <CiCirclePlus className="connect-icon icons-2" />                                               </span>
+				);
+			})
+		}
 		</div>
 		</div>
 	)

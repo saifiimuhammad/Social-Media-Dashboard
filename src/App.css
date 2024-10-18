@@ -440,6 +440,12 @@ a {
 	height: 100%;
 }
 
+.dashboard-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 2rem;
+}
+
 /***** User Card *****/
 
 .user-card {
@@ -482,13 +488,76 @@ a {
 	font-size: .75rem;
 }
 
+/***** Insights Container *****/
+
+.social-stats {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 3rem;
+	width: 100%;
+}
+
+
+.insights-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 2rem;
+	width: 100%;
+
+}
+
+.insights-title {
+	text-align: center;
+}
+
+.user-insights-container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	row-gap: 1.5rem;
+}
+
+.social-insight {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.social-title-box {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: .45rem;
+	width: 100%;
+}
+
+.social-main-title {
+	font-size: 1.25rem;
+	opacity: .5;
+}
+
+.title-line {
+	height: .8px;
+	width: 100%;
+	background-color: #202020;
+	opacity: .3;
+}
+
 /***** Socials Connected *****/
+
+.socials-connected {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: .5rem;
+
+}
 
 .socials-box {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	column-gap: .6rem;
+        align-items: center;
+        justify-content: center;
+	column-gap: .25rem;
 }
 
 .connect-icon {
@@ -496,4 +565,10 @@ a {
 }
 
 
+/********** Media Queries ************/
 
+@media screen and (min-width: 900px) {
+  .container {
+    padding-inline: 8rem;
+  }
+}

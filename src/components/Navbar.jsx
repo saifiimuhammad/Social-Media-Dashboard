@@ -44,7 +44,7 @@ const Navbar = (props) => {
             {navLinks.map((item, key) => {
               return (
                 <li key={key} className="nav-menu-opts">
-                  <Link to='/' className="nav-menu-links">{item}</Link>
+                  <Link to={item.link} className="nav-menu-links">{item.name}</Link>
                 </li>
               );
             })}
@@ -60,7 +60,9 @@ const Navbar = (props) => {
           />
 
           <div className="user-container">
+          <Link to="/dashboard" className="user-settings-link">
             <LuUser className="user-settings icons" />
+          </Link>
           </div>
         </div>
       </nav>

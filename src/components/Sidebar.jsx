@@ -1,5 +1,6 @@
 import { RiSettings3Line } from "react-icons/ri";
 import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
+import { Link } from 'react-router-dom';
 
 const Sidebar = (props) => {
 
@@ -16,7 +17,7 @@ const Sidebar = (props) => {
         {
           sideLinks.map((item, key) => {
             return (
-              <li className="sidebar-items" key={key}><a className="sidebar-links">{item}</a></li>
+              <li className="sidebar-items" key={key}><Link to={item.link} className="sidebar-links">{item.name}</Link></li>
             );
           })
         }
